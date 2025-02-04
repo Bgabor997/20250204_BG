@@ -36,3 +36,15 @@
 
     $auto->addModel("Superb");
     var_dump($auto);
+
+    include_once 'SportCar.php';
+    $sportCar = new SportCar("Ford", "Piros", 2020);
+    $sportCar->setKobcenti(5500);
+    var_dump($sportCar);
+    echo "sport autó színe: " . $sportCar->szin;
+    echo "sport autó köbcentije: " . $sportCar->getKobcenti();
+
+    echo "kobcenti: " . $sportCar
+        ->setKobcenti(2000)
+        ->getKobcenti();
+    
