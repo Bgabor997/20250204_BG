@@ -23,3 +23,18 @@ Route::get("/users", [
     Controller::class,
     "getUsers"
 ]);
+
+Route::post("/users", [
+    Controller::class,
+    "createUser"
+]);
+
+Route::put("/user/{user}", [
+    Controller::class,
+    "updateUser"
+]);
+
+Route::delete("/user/{user}", [
+    Controller::class,
+    "deleteUser"
+]);
