@@ -14,4 +14,9 @@ class Car extends Model
         "model",
         "ajtok"
     ];
+
+    public function owner()
+    {
+        return $this->belongsTo(Owner::class);
+    }
 }

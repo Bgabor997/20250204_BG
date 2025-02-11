@@ -10,6 +10,7 @@ class OwnerController extends Controller
     public function getOwners()
     {
         $owners = Owner::query()
+            ->with("cars")
             ->get();
 
         return response()->json($owners);
