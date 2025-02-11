@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\OwnerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -49,4 +50,14 @@ Route::group([
     Route::post("/create", "createCar");
     Route::put("/{car}", "updateCar");
     Route::delete("/{car}", "deleteCar");
+});
+
+Route::group([
+    "prefix" => "/owners",
+    "controller" => OwnerController::class
+], function () {
+    Route::get("/", "getOwners");
+    Route::post("/create", "createOwner");
+    Route::put("/{owner}", "updateOwner");
+    Route::delete("/{owner}", "deleteOwner");
 });
